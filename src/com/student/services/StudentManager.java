@@ -20,7 +20,7 @@ public class StudentManager {
         do {
             System.out.println("Required name is: Firstname Lastname");
             name = SC.nextLine();
-        } while (!name.matches("^\\p{L}*+\\s+\\p{L}*$"));
+        } while (!name.matches("^\\p{L}+\\s+\\p{L}*$"));
         return name;
     }
 
