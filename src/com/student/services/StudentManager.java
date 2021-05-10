@@ -226,6 +226,8 @@ public class StudentManager {
         for (int i = 0; i < 20; i++) {
             System.out.println();
         }
+        System.out.printf("%65s%s"," ","----- STUDENT MANAGEMENT SOFTWARE -----");
+        System.out.println("\n");
         for (int i = 0; i < 169; i++) {
             System.out.print("-");
         }
@@ -256,7 +258,7 @@ public class StudentManager {
                         System.out.print("-");
                     }
                     System.out.println();
-                    System.out.printf("|%7s%s%7s|"," ","Name"," ");
+                    System.out.printf("|%9s%s%10s|"," ","Name"," ");
                     System.out.printf("%7s%s%7s|"," ","Code"," ");
                     System.out.printf("%6s%s%5s|"," ","Age"," ");
                     System.out.printf("%5s%s%5s|"," ","Gender"," ");
@@ -264,7 +266,7 @@ public class StudentManager {
                     System.out.printf("%3s%s%4s|"," ","Score 2"," ");
                     System.out.printf("%3s%s%4s|"," ","Score 3"," ");
                     System.out.printf("%3s%s%4s|"," ","Score 4"," ");
-                    System.out.printf("%7s%s%7s|"," ","Average"," ");
+                    System.out.printf("%4s%s%5s|"," ","Average"," ");
                     System.out.printf("%2s%s%3s|"," ","Classified"," ");
                     System.out.println();
                     for (int i = 0; i < 169; i++) {

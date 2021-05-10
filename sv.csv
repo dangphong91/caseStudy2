@@ -1,11 +1,11 @@
 Name,Code,Age,Gender,Score1,Score2,Score3,Score4,Average,Classified
 Phước Khánh,C0221H102,26,Nam,10.0,10.0,10.0,10.0,10.0,Great
-Duy Hân,C0221H103,22,Nữ,10.0,8.9,9.9,10.0,9.814285714285715,Great
-Tín Trần,C0221H104,26,Nam,9.8,9.5,9.0,10.0,9.614285714285714,Great
-Đăng Phong,C0221H101,29,Nam,10.0,9.0,9.0,10.0,9.571428571428571,Great
-Quốc Huy,C0221H105,23,Nam,9.8,9.6,9.5,10.0,9.771428571428572,Great
-Hoàng Dương,C0221H106,26,Nữ,0.0,0.0,0.0,0.0,0.0,Not yet
-Tâm Thiện,C0221H107,27,Nam,0.0,0.0,0.0,0.0,0.0,Not yet
-Hoàng Long,C0221H108,22,Nữ,0.0,0.0,0.0,0.0,0.0,Not yet
-Hoàng Nam,C0221H109,29,Nam,0.0,0.0,0.0,0.0,0.0,Not yet
-Bình Hụ,C0221H110,23,Nam,0.0,0.0,0.0,0.0,0.0,Not yet
+Duy Hân,C0221H103,22,Nữ,10.0,8.9,9.9,10.0,9.81,Great
+Tín Trần,C0221H104,26,Nam,9.8,9.5,9.0,10.0,9.61,Great
+Đăng Phong,C0221H101,29,Nam,10.0,9.5,9.8,9.7,9.74,Great
+Quốc Huy,C0221H105,23,Nam,9.8,9.6,9.5,10.0,9.77,Great
+Hoàng Dương,C0221H106,26,Nữ,9.8,9.6,0.0,0.0,-1.0,Not yet
+Tâm Thiện,C0221H107,27,Nam,0.0,0.0,0.0,0.0,-1.0,Not yet
+Hoàng Long,C0221H108,22,Nữ,0.0,0.0,0.0,0.0,-1.0,Not yet
+Hoàng Nam,C0221H109,29,Nam,0.0,0.0,0.0,0.0,-1.0,Not yet
+Bình Hụ,C0221H110,23,Nam,0.0,0.0,0.0,0.0,-1.0,Not yet

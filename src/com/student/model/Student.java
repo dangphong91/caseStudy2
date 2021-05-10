@@ -55,9 +55,10 @@ public class Student implements Comparable<Student> {
 
     public double getAverage() {
         if (score1 == 0 || score2 == 0 || score3 == 0 || score4 == 0) {
-            return 0;
+            return -1;
         } else {
-            return (score1 + score2 + score3 * 2 + score4 * 3)/ 7;
+            double average = (score1 + score2 + score3 * 2 + score4 * 3)/ 7;
+            return Math.round(average *100.0)/100.0;
         }
     }
 
@@ -70,7 +71,7 @@ public class Student implements Comparable<Student> {
             return "Medium";
         } else if (getAverage() >= 4) {
             return "Weak";
-        } else if (getAverage() > 0) {
+        } else if (getAverage() >= 0) {
             return "Least";
         } else {
             return "Not yet";
