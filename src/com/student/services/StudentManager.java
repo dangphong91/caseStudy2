@@ -1,6 +1,6 @@
 package com.student.services;
 
-import com.student.data.*;
+import com.student.dal.*;
 import com.student.model.*;
 
 import java.io.*;
@@ -105,15 +105,21 @@ public class StudentManager {
         }
     }
 
+    public String checkScore() {
+        String score;
+        do {
+            System.out.println("Score: 0.0-10.0");
+            score = SC.nextLine();
+        } while (!score.matches("^[0-9][.][0-9]") && !score.equals("10.0"));
+        return score;
+    }
+
     public void importScore(String code) {
         String score1,score2,score3,score4,yesNo;
         int i = find(code);
         if (i != -1) {
             System.out.println("Score 1:");
-            do {
-                System.out.println("Score: 0.0-10.0");
-                score1 = SC.nextLine();
-            } while (!score1.matches("^[0-9].[0-9]") && !score1.equals("10"));
+            score1 = checkScore();
             list.get(i).setScore1(Double.parseDouble(score1));
             FILECSV.write();
             System.out.println("Import success.");
@@ -124,10 +130,7 @@ public class StudentManager {
                 switch (yesNo) {
                     case "Y":
                         System.out.println("Score 2:");
-                        do {
-                            System.out.println("Score: 0.0-10.0");
-                            score2 = SC.nextLine();
-                        } while (!score2.matches("^[0-9].[0-9]") && !score2.equals("10"));
+                        score2 = checkScore();
                         list.get(i).setScore2(Double.parseDouble(score2));
                         FILECSV.write();
                         System.out.println("Import success.");
@@ -137,10 +140,7 @@ public class StudentManager {
                             switch (yesNo) {
                                 case "Y":
                                     System.out.println("Score 3:");
-                                    do {
-                                        System.out.println("Score: 0.0-10.0");
-                                        score3 = SC.nextLine();
-                                    } while (!score3.matches("^[0-9].[0-9]") && !score3.equals("10"));
+                                    score3 = checkScore();
                                     list.get(i).setScore3(Double.parseDouble(score3));
                                     FILECSV.write();
                                     System.out.println("Import success.");
@@ -150,10 +150,7 @@ public class StudentManager {
                                         switch (yesNo) {
                                             case "Y":
                                                 System.out.println("Score 4:");
-                                                do {
-                                                    System.out.println("Score: 0.0-10.0");
-                                                    score4 = SC.nextLine();
-                                                } while (!score4.matches("^[0-9].[0-9]") && !score4.equals("10"));
+                                                score4 = checkScore();
                                                 list.get(i).setScore4(Double.parseDouble(score4));
                                                 FILECSV.write();
                                                 System.out.println("Import success.");

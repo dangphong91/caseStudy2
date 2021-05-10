@@ -1,15 +1,10 @@
 package com.student.model;
 
 public class Student implements Comparable<Student> {
-    String name;
-    String code;
-    int age;
-    String gender;
-    double score1;
-    double score2;
-    double score3;
-    double score4;
-    double average;
+    private String name,gender;
+    private final String code;
+    private int age;
+    private double score1,score2,score3,score4;
 
     public Student(String name, String code, int age, String gender) {
         this.name = name;
@@ -62,8 +57,7 @@ public class Student implements Comparable<Student> {
         if (score1 == 0 || score2 == 0 || score3 == 0 || score4 == 0) {
             return 0;
         } else {
-            this.average  = (score1 + score2 + score3 * 2 + score4 * 3)/ 7;
-            return average;
+            return (score1 + score2 + score3 * 2 + score4 * 3)/ 7;
         }
     }
 

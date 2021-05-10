@@ -1,17 +1,17 @@
-package com.student.data;
+package com.student.dal;
 
-import com.student.model.Student;
+import com.student.model.*;
 
 import java.io.*;
 import java.util.*;
 
 public class FileCSV {
-    private final File file;
+    private final File FILE;
     private  ArrayList<Student> list;
     private final String HEADER = "Name,Code,Age,Gender,Score1,Score2,Score3,Score4,Average,Classified";
 
     public FileCSV(File file) {
-        this.file = file;
+        this.FILE = file;
     }
 
     public ArrayList<Student> getList() {
@@ -19,16 +19,16 @@ public class FileCSV {
     }
 
     public void read(){
-        if (!file.exists()) {
+        if (!FILE.exists()) {
             try {
-                file.createNewFile();
+                FILE.createNewFile();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
         try {
             list = new ArrayList<>();
-            FileReader fr = new FileReader(file);
+            FileReader fr = new FileReader(FILE);
             BufferedReader br = new BufferedReader(fr);
             String line;
             while ((line = br.readLine()) != null) {
@@ -54,7 +54,7 @@ public class FileCSV {
 
     public void write() {
         try {
-            FileWriter fw = new FileWriter(file);
+            FileWriter fw = new FileWriter(FILE);
             BufferedWriter bw = new BufferedWriter(fw);
             bw.append(HEADER);
             bw.append("\n");
