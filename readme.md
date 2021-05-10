@@ -54,8 +54,7 @@
             Nếu nhập xong thông báo kết quả<br>
             Nhấn enter để quay lại menu<br>
     <h4>- 6.Sort student:</h4>
-        Lựa chọn sắp xếp học viên sẽ thực hiện tính năng sắp xếp danh sách học viên<br>
-            theo thứ tự giảm dần của điểm trung bình<br>
+        Lựa chọn sắp xếp học viên sẽ thực hiện tính năng sắp xếp danh sách học viên theo thứ tự giảm dần của điểm trung bình<br>
     <h4>- 7.Ranking list:</h4>
         Lựa chọn danh sách xếp loại sẽ thực hiện tính năng hiển thị tên và xếp loại của các học viên, kèm thống kê số lượng học viên cùng loại<br>
     <h4>- X.Exit system:</h4>

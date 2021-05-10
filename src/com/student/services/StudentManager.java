@@ -110,7 +110,7 @@ public class StudentManager {
         do {
             System.out.println("Score: 0.0-10.0");
             score = SC.nextLine();
-        } while (!score.matches("^[0-9][.][0-9]") && !score.equals("10.0"));
+        } while (!score.matches("^[0-9][.][0-9]$") && !score.equals("10.0"));
         return score;
     }
 
