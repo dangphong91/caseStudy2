@@ -20,7 +20,7 @@ public class StudentManager {
         do {
             System.out.println("Required name is: Firstname Lastname");
             name = SC.nextLine();
-        } while (!name.matches("^[A-Z]+\\w*+\\s+[A-Z]+\\w*$"));
+        } while (!name.matches("^\\p{L}*+\\s+\\p{L}*$"));
         return name;
     }
 
@@ -45,9 +45,9 @@ public class StudentManager {
     public String importGender() {
         String gender;
         do {
-            System.out.println("Nam/Nu");
+            System.out.println("Nam/Nữ");
             gender = SC.nextLine();
-        } while (!gender.equals("Nam") && !gender.equals("Nu"));
+        } while (!gender.equals("Nam") && !gender.equals("Nữ"));
         return gender;
     }
 
@@ -201,6 +201,26 @@ public class StudentManager {
         System.out.println("Sort success.");
     }
 
+    public void rankingList() {
+        list = FILECSV.getList();
+        int count = 1;
+        for (int i = 0; i < list.size(); i++) {
+            System.out.printf("|  %-12s-  %-8s|",list.get(i).getName(),list.get(i).getClassified());
+            if (i == list.size() -1) {
+                System.out.println();
+                System.out.println(list.get(i).getClassified() + " - " + count);
+            } else {
+                if (list.get(i).getClassified().equals(list.get(i+1).getClassified())) {
+                    count ++;
+                } else {
+                    System.out.println();
+                    System.out.println(list.get(i).getClassified() + " - " + count);
+                    count = 1;
+                }
+            }
+        }
+    }
+
     public void readList() {
         FILECSV.read();
     }
@@ -209,7 +229,7 @@ public class StudentManager {
         for (int i = 0; i < 20; i++) {
             System.out.println();
         }
-        for (int i = 0; i < 148; i++) {
+        for (int i = 0; i < 169; i++) {
             System.out.print("-");
         }
         System.out.println();
@@ -219,9 +239,10 @@ public class StudentManager {
         System.out.printf("%2s%s%2s|"," ","4.Remove Student"," ");
         System.out.printf("%3s%s%3s|"," ","5.Import Score"," ");
         System.out.printf("%3s%s%3s|"," ","6.Sort Student"," ");
+        System.out.printf("%3s%s%3s|"," ","7.Ranking List"," ");
         System.out.printf("%3s%s%4s|"," ","X.Exit System"," ");
         System.out.println();
-        for (int i = 0; i < 148; i++) {
+        for (int i = 0; i < 169; i++) {
             System.out.print("-");
         }
         System.out.println();
@@ -234,27 +255,27 @@ public class StudentManager {
             choice = SC.nextLine();
             switch (choice) {
                 case "1":
-                    for (int i = 0; i < 148; i++) {
+                    for (int i = 0; i < 169; i++) {
                         System.out.print("-");
                     }
                     System.out.println();
-                    System.out.printf("|%5s%s%5s|"," ","Name"," ");
-                    System.out.printf("%6s%s%6s|"," ","Id"," ");
-                    System.out.printf("%3s%s%4s|"," ","Age"," ");
-                    System.out.printf("%3s%s%3s|"," ","Gender"," ");
+                    System.out.printf("|%7s%s%7s|"," ","Name"," ");
+                    System.out.printf("%7s%s%7s|"," ","Code"," ");
+                    System.out.printf("%6s%s%5s|"," ","Age"," ");
+                    System.out.printf("%5s%s%5s|"," ","Gender"," ");
                     System.out.printf("%3s%s%4s|"," ","Score 1"," ");
                     System.out.printf("%3s%s%4s|"," ","Score 2"," ");
                     System.out.printf("%3s%s%4s|"," ","Score 3"," ");
                     System.out.printf("%3s%s%4s|"," ","Score 4"," ");
-                    System.out.printf("%5s%s%5s|"," ","Average"," ");
-                    System.out.printf("%2s%s%2s|"," ","Classified"," ");
+                    System.out.printf("%7s%s%7s|"," ","Average"," ");
+                    System.out.printf("%2s%s%3s|"," ","Classified"," ");
                     System.out.println();
-                    for (int i = 0; i < 148; i++) {
+                    for (int i = 0; i < 169; i++) {
                         System.out.print("-");
                     }
                     System.out.println();
                     readList();
-                    for (int i = 0; i < 148; i++) {
+                    for (int i = 0; i < 169; i++) {
                         System.out.print("-");
                     }
                     System.out.println();
@@ -294,6 +315,12 @@ public class StudentManager {
                 case "6":
                     System.out.println("Sort Student:");
                     sortStudent();
+                    System.out.println("Press the enter key to return menu");
+                    SC.nextLine();
+                    break;
+                case "7":
+                    System.out.println("Ranking List:");
+                    rankingList();
                     System.out.println("Press the enter key to return menu");
                     SC.nextLine();
                     break;

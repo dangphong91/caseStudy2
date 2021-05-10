@@ -36,7 +36,7 @@ public class FileCSV {
                     continue;
                 }
                 String[] st = line.split(",");
-                System.out.printf("|  %-12s|%12s  |%6s    |     %-7s|%9s     |%9s     |%9s     |%9s     |%-17s|    %-10s|", (Object[]) st);
+                System.out.printf("|    %-14s|%14s    |%8s      |       %-9s|%9s     |%9s     |%9s     |%9s     |  %-19s|    %-11s|", (Object[]) st);
                 System.out.println();
                 Student student = new Student(st[0], st[1], Integer.parseInt(st[2]), st[3]);
                 student.setScore1(Double.parseDouble(st[4]));
